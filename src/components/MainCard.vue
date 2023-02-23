@@ -22,7 +22,7 @@
         </div>
       </div>
     </div>
-    <hr/>
+    <hr  style="margin-top:8px;"/>
     <div class="top">
       <div class="bottom">
         <el-button

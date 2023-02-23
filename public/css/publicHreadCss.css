@@ -1,0 +1,331 @@
+.header {
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    height: 66px;
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.75);
+    box-shadow: 0px 3px 7px 0px rgb(0 0 0 / 35%);
+}
+
+/* 音乐按钮 */
+
+.audio {
+    position: fixed;
+    z-index: 9;
+    top: 18px;
+    left: 70px;
+
+}
+
+#audio {
+    display: none;
+}
+
+.audio .audios {
+    position: absolute;
+    z-index: 999;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.audioYes,
+.audioNo {
+    position: absolute;
+    /* display: none; */
+    width: 30px;
+    height: 30px;
+}
+/* .audioYes{
+    display: block;
+}
+
+.audioNo {
+    display: none;
+} */
+
+/* #audio:checked~.audioNo {
+    display: block;
+}
+
+.audio audio {
+    display: block;
+}
+
+#audio:checked~audio {
+    display: none;
+    opacity: 0;
+}
+
+#audio:checked~.audioYes {
+    display: none;
+} */
+
+.logo {
+    float: left;
+    height: 100%;
+    margin-left: 8px;
+    width: 317px;
+    background: url(/images/logo.png) no-repeat;
+}
+
+/* 导航 */
+.header_nav {
+    position: relative;
+    margin-left: -84px;
+}
+
+.header_textNav {
+    padding-right: 10px;
+    margin-left: 40px;
+}
+
+.header_textPublic {
+    padding: 0 30px;
+    float: left;
+    height: 66px;
+    line-height: 66px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.header_textPublic:hover,
+.header_textChecked {
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+    color: #fff;
+}
+
+/* 蓝色导航条 */
+
+.header_navs {
+    position: absolute;
+    left: 70px;
+    top: 0px;
+    height: 5px;
+    width: 40px;
+    background-color: rgb(105, 224, 255);
+    transition: all 0.3s;
+}
+
+.header_textPublic:nth-of-type(1):hover~.header_navs {
+    left: 70px;
+}
+
+.header_textPublic:nth-of-type(2):hover~.header_navs {
+    left: 168px;
+}
+
+.header_textPublic:nth-of-type(3):hover~.header_navs {
+    left: 268px;
+}
+
+.header_textPublic:nth-of-type(4):hover~.header_navs {
+    left: 368px;
+}
+
+.header_textPublic:nth-of-type(5):hover~.header_navs {
+    left: 466px;
+}
+
+.header_textPublic:nth-of-type(6):hover~.header_navs {
+    left: 565px;
+}
+
+/* 头部右边登入/成长关爱 */
+
+.header_right {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    height: 100%;
+
+}
+
+.header_cz {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.header_czimg,
+.header_login_img {
+    margin-left: 18px;
+    width: 27px;
+    height: 27px;
+    opacity: 0.7;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.login_btn {
+    position: relative;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border: 0;
+    font-size: 17px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.header_cz:hover,
+.header_cz:hover .header_czimg,
+.header_login:hover .dr,
+.header_login:hover .header_login_img {
+    color: white;
+    opacity: 1;
+}
+
+/* 登入页面 */
+
+.mhy_login {
+    display: none;
+}
+
+#login:checked~.mhy_login {
+    display: flex;
+}
+
+.mhy_login {
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+
+}
+
+.mhy_account {
+    position: relative;
+    margin-top: 58px;
+    padding: 30px 40px 50px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.mhy_logo {
+    width: 107px;
+    height: 38px;
+    position: absolute;
+    top: -58px;
+    left: calc(50% - 58.5px);
+}
+
+.mhy_account_out {
+    position: absolute;
+    z-index: 999;
+    top: 15px;
+    right: 15px;
+}
+
+.mhy_account_out img {
+    display: block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.account {
+    border-bottom: 1px solid #f6f6f6;
+    font-size: 18px;
+    color: #7f858a;
+}
+
+.account label {
+    display: inline-block;
+    padding: 10px;
+    width: 165px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.mhy_input {
+    position: relative;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.mhy_input_account {
+    display: flex;
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid #ebebeb;
+}
+
+.mhy_input_account input {
+    outline: none;
+    padding: 14px 12px;
+    border: none;
+    color: #3c4044;
+    font-size: 16px;
+}
+
+.mhy_input_yzm {
+    padding: 14px 0px;
+    position: absolute;
+    right: 0px;
+    width: 120px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.mhy_login_btn {
+    display: block;
+    margin-top: 25px;
+    width: 100%;
+    border-radius: 4px;
+    border: none;
+    background-color: #3b4354;
+    color: #fff;
+    line-height: 48px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.mhy_login_public {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.mhy_help {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 注册/登入切换 */
+.login_one,
+.login_two {
+    display: none;
+}
+
+#account_one:checked~.account label:nth-child(1) {
+    font-weight: 700;
+    color: #3c4044;
+}
+
+#account_one:checked~.login_one {
+    display: block;
+}
+
+#account_two:checked~.account label:nth-child(2) {
+    font-weight: 700;
+    color: #3c4044;
+}
+
+#account_two:checked~.login_two {
+    display: block;
+}

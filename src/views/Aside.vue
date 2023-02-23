@@ -10,7 +10,7 @@
       <el-icon><font-awesome-icon icon="fa-solid fa-file-lines" /></el-icon>
       <template #title>初始化书签</template>
     </el-menu-item>
-        <el-menu-item index="/">
+        <el-menu-item index="/Bookmarks">
       <el-icon><font-awesome-icon icon="fa-solid fa-bookmark" /></el-icon>
       <template #title>所有书签</template>
     </el-menu-item>

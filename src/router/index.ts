@@ -6,12 +6,13 @@ import Framework from "../views/Framework.vue"
 import Main from "../views/Main.vue"
 import TopMain from "../views/TopMain.vue"
 import Initializebbar from "../views/Initializebbar.vue"
+import Index from '../views/Index.vue'
 
 const router = createRouter({
     history:createWebHistory(),
     routes:[
         {
-            path:'/',
+            path:'/Bookmarks',
             component:Framework,
             children:[
                 {
@@ -30,6 +31,10 @@ const router = createRouter({
                     component:TopMain
                 }
             ]
+        },
+        {
+            path:"/",
+            component:Index
         }
     ]
 })

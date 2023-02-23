@@ -3,7 +3,7 @@
     <el-upload
     class="upload-demo"
     drag
-    action="https://localhost:44362/api/GetBookmarks/BookMarks"
+    action="http://101.43.25.210:9031/Api/GetBookmarks/BookMarks"
     multiple
     method="post"
     name="file"

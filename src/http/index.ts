@@ -2,9 +2,10 @@
 import axios from "axios"
 import {ref} from 'vue'
 
-const httpApi = ref("https://localhost:44362/api")
+const httpApi = ref("http://101.43.25.210:9031/api")
 
-//查询所有书签
+//查询所有书签C
+
 export const GetAllBook = (parms:{})=>{
     axios.defaults.headers['Content-Type'] = 'application/json'
     return axios({

@@ -1,5 +1,5 @@
 <template>
-  <div class="common-layout dark">
+  <div class="common-layout dark" style="margin:8px">
     <el-container>
       <el-aside width="200px">
         <Aside />
