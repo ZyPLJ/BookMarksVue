@@ -2,7 +2,7 @@
 import axios from "axios"
 import {ref} from 'vue'
 
-const httpApi = ref("http://101.43.25.210:9031/api")
+const httpApi = ref("https://localhost:44362/api")
 
 //查询所有书签C
 
@@ -36,10 +36,19 @@ export const SetTopBookMark = (parms:{})=>{
         method:'get',
     })
 }
+
 //取消置顶
 export const CancelTopBookMark = (parms:{})=>{
     return axios({
         url:httpApi.value + "/TopBookmarks/CancelTopBookMark/"+parms,
         method:'delete',
+    })
+}
+
+//获取书签分级
+export const Getclassification = () =>{
+    return axios({
+        url:httpApi.value + '/GetClass/GetAllClass',
+        method:'get'
     })
 }
