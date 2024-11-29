@@ -89,7 +89,7 @@ const setLoadGetBook = async () => {
 //解析url
 const newurl = computed(()=>{
   var pattern = /[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+\.?/  
-  return 'https://api.iowen.cn/favicon/' + (Book?.value.url).match(pattern)[0] +'.png'
+  return 'https://icon.bqb.cool/?url=https://' + (Book?.value.url).match(pattern)[0]
 })
 </script>
 

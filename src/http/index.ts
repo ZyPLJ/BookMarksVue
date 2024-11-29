@@ -2,7 +2,7 @@
 import axios from "axios"
 import {ref} from 'vue'
 
-const httpApi = ref("https://localhost:44362/api")
+const httpApi = ref("https://localhost:7188/api")
 
 //查询所有书签
 export const GetAllBook = (parms:{})=>{
