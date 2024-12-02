@@ -123,6 +123,11 @@ const menus = reactive({
     path: "/Initializebbar",
     icon: "fa-solid fa-file-lines",
   },
+  InitAuto: {
+    name: "初始化书签(自动)",
+    path: "/InitAuto",
+    icon: "fa-solid fa-file-lines",
+  },
   Bookmarks: {
     name: "所有书签",
     path: "/",
