@@ -17,7 +17,7 @@
             首&nbsp;页
           </a>
           <a href="/Bookmarks" class="header_textPublic"> 书签页 </a>
-          <a href="http://101.43.25.210:7031/" class="header_textPublic">
+          <a href="https://pljzy.top" class="header_textPublic">
             个人博客
           </a>
           <a href="https://ailink.pw/#/login/register?code=1767992919" class="header_textPublic">

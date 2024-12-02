@@ -37,7 +37,6 @@
       </div>
     </template>
     <el-form
-      :label-position="labelPosition"
       label-width="100px"
       :model="formLabelAlign"
       style="max-width: 460px"
@@ -56,7 +55,7 @@
         >
           <el-option
             v-for="item in cities"
-            :key="item.length"
+            :key="item"
             :label="item.label"
             :value="item.value"
           >
@@ -88,14 +87,7 @@
 
 <script lang="ts" setup>
 import { ref, reactive, onMounted } from "vue";
-import {
-  Document,
-  Menu as IconMenu,
-  Location,
-  Setting,
-} from "@element-plus/icons-vue";
 import { useRoute, useRouter } from "vue-router";
-import { Delete, Edit, Search, Share, Upload } from "@element-plus/icons-vue";
 import { ElButton, ElDialog } from "element-plus";
 import { CircleCloseFilled } from "@element-plus/icons-vue";
 import type { FormInstance, FormRules } from "element-plus";
@@ -133,19 +125,14 @@ const menus = reactive({
   },
   Bookmarks: {
     name: "所有书签",
-    path: "/Bookmarks",
+    path: "/",
     icon: "fa-solid fa-bookmark",
   },
   TopMain: {
     name: "书签置顶栏",
     path: "/TopMain",
     icon: "fa-solid fa-arrow-up-1-9",
-  },
-  Baidu: {
-    name: "百度搜索",
-    path: "/Baidu",
-    icon: "fa-solid fa-magnifying-glass",
-  },
+  }
 });
 const menustow = ref();
 const value = ref("");
@@ -208,7 +195,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
       if (count.data.length >= 7) {
         ElMessage.warning(`以达到最大添加数目!`);
       } else {
-        var uid = generateUID();
+        let uid = generateUID();
         formLabelAlign.path = "/dynamic-page/" + (uid);
         formLabelAlign.uid = uid;
         const res = (await addMenus(formLabelAlign)).data;
@@ -220,7 +207,6 @@ const submitForm = async (formEl: FormInstance | undefined) => {
           });
           const restow = (await GetMenus()).data;
           menustow.value = restow.data;
-          nums.value = nums.value + 1;
           visible.value = false;
         } else {
           ElMessage.error(`${res.message}`);
@@ -252,13 +238,13 @@ const DelAside = (id: any) => {
     }
   )
     .then(async () => {
-      var res = (await DeleteMenus(id)).data
+      let res = (await DeleteMenus(id)).data
       if(res.statusCode == 200){
         ElMessage.success(`${res.message}`)
       }else{
         ElMessage.warning(`${res.message}`)
       }
-      load()
+      await load()
       router.replace("/Initializebbar")
     })
     .catch(() => {
@@ -272,7 +258,7 @@ const DelAside = (id: any) => {
 //随机UID
 const generateUID = ()=>{
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-    var r = Math.random() * 16 | 0,
+    let r = Math.random() * 16 | 0,
         v = c === 'x' ? r : (r & 0x3 | 0x8);
     return v.toString(16);
   });
@@ -291,7 +277,7 @@ const generateUID = ()=>{
 }
 .el-menu-item__title .item_btn {
   position: absolute;
-  top: 0px;
+  top: 0;
   right: 0;
 }
 .item_btn{

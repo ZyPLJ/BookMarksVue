@@ -1,15 +1,13 @@
 <template>
-  <div class="baidu">    
-    <el-row justify="center" align="center">     
-      <el-col :span="12">       
+  <div class="baidu">
+    <el-row justify="center" align="center">
+      <el-col :span="12">
         <el-autocomplete
     v-model="state"
     :fetch-suggestions="querySearchAsync"
     placeholder="百度一下"
     @select="handleSelect"
-    style="width:280px;box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-            font-size: 16px;
-            outline: none;"
+    style="width:280px;box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);font-size: 16px; outline: none;"
   >
     <template #suffix>
       <el-icon class="el-input__icon" @click="handleIconClick">
@@ -20,16 +18,12 @@
       <div class="value">{{ item.value }}</div>
       <span class="link">{{ item.link }}</span>
     </template>
-  </el-autocomplete> 
+  </el-autocomplete>
         <el-button
           type="primary"
           @click="ToBaidu"
-          style="
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-            font-size: 16px;
-            outline: none;
-          ">百度一下</el-button>    
-      </el-col>   
+          style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);font-size: 16px;outline: none;">百度一下</el-button>
+      </el-col>
     </el-row>
   </div>
 </template>
