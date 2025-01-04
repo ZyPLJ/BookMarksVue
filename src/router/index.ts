@@ -1,20 +1,19 @@
 import { createRouter, createWebHistory } from "vue-router";
-import {useRouter} from 'vue-router'
 
-import Framework from "../views/Framework.vue"
+import Framework from '../views/Framework.vue'
 // import Aside from "../views/Aside.vue"
 import Main from "../views/Main.vue"
 import TopMain from "../views/TopMain.vue"
 import Initializebbar from "../views/Initializebbar.vue"
-import Index from '../views/Index.vue'
 import Baidu from '../views/Baidu.vue'
 import DynamicPage from '../views/DynamicPage.vue'
+import InitAuto from '../views/InitAuto.vue'
 
 const router = createRouter({
     history:createWebHistory(),
     routes:[
         {
-            path:'/Bookmarks',
+            path:'/',
             component:Framework,
             children:[
                 {
@@ -26,6 +25,11 @@ const router = createRouter({
                     path:"/Initializebbar",
                     name:"初始化书签页",
                     component:Initializebbar
+                },
+                {
+                    path:"/InitAuto",
+                    name:"初始化书签页(自动)",
+                    component:InitAuto
                 },
                 {
                     path:'/TopMain',
@@ -43,10 +47,6 @@ const router = createRouter({
                     component: DynamicPage
                   }
             ]
-        },
-        {
-            path:"/",
-            component:Index
         }
     ]
 })

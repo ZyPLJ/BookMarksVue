@@ -100,3 +100,11 @@ export const DeleteMenus = (parms:{})=>{
         method:'delete',
     })
 }
+
+//自动初始化书签
+export const AutoInitBookmarks = (parms:{})=>{
+    return axios({
+        url:httpApi.value + "/GetBookmarks/AnalysisBookmark/" + parms,
+        method:'get',
+    })
+}
